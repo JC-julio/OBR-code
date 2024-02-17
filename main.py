@@ -16,7 +16,7 @@ robo = DriveBase(motorEsquerdo, motorDireito,
                  wheel_diameter=42.8, axle_track=240)
 # iniciando sensores de cor
 CorEsquerda = ColorSensor(Port.S1)
-CorDireita = ColorSensor(Port.S4)
+CorDireita = ColorSensor(Port.S2)
 ultrassonico = UltrasonicSensor(Port.S3)
 
 cores = []
@@ -115,7 +115,7 @@ def obstaculo():
 
 
 while True:
-    robo.drive(100, 0)
+    robo.drive(83, 0)
 
     if ultrassonico.distance() < 40:
         obstaculo()
@@ -150,4 +150,4 @@ while True:
             robo.straight(-50)
 
         cores = []
-        nverdes = 0
+        nverdes = 0
