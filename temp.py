@@ -11,14 +11,12 @@ motorEsquerdo = Motor(
     Port.A, positive_direction=Direction.CLOCKWISE, gears=None)
 motorDireito = Motor(
     Port.B, positive_direction=Direction.CLOCKWISE, gears=None)
-motorGarraEsquerdo = Motor(
-    Port.C, positive_direction=Direction.CLOCKWISE, gears=None)
 # inicia DriveBase
 robo = DriveBase(motorEsquerdo, motorDireito,
-                 wheel_diameter=41.9, axle_track=244.3)
+                 wheel_diameter=42.8, axle_track=240)
 # iniciando sensores de cor
-CorEsquerda = ColorSensor(Port.S4)
-CorDireita = ColorSensor(Port.S1)
+CorEsquerda = ColorSensor(Port.S1)
+CorDireita = ColorSensor(Port.S4)
 ultrassonico = UltrasonicSensor(Port.S3)
 
 cores = []
@@ -114,6 +112,7 @@ def obstaculo():
         robo.drive(100, 0)
     robo.straight(40)
     robo.turn(90 * lado)
+
 
 while True:
     robo.drive(90, 0)
