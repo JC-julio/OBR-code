@@ -113,9 +113,9 @@ def obstaculo():
     robo.straight(40)
     robo.turn(90 * lado)
 
-
 while True:
     robo.drive(90, 0)
+    
 
     if ultrassonico.distance() < 40:
         obstaculo()
